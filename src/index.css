@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #3b4a56;
+  background: #ffffff;
+}
+
+#root {
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-family: 'Ubuntu', 'Nunito', sans-serif;
+  color: #123247;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  line-height: 1.7;
+}

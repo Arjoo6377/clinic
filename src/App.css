@@ -1,0 +1,459 @@
+:root {
+  --primary: #863bff;
+  --primary-strong: #7e14ff;
+  --accent: #47bfff;
+  --soft-bg: #f7f2ff;
+  --text: #2d2544;
+  --card-shadow: 0 12px 35px rgba(35, 20, 76, 0.13);
+}
+
+.site {
+  min-height: 100vh;
+  color: var(--text);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 45%, #f7f2ff 100%);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topbar {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  color: #fff;
+  padding: 10px 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.top-links {
+  display: flex;
+  gap: 16px;
+}
+
+.top-links a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.95;
+}
+
+.top-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.mainbar {
+  padding: 18px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #ebf1f5;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand img {
+  width: 50px;
+  height: 44px;
+  transform: scale(1.8);
+  transform-origin: left center;
+}
+
+.brand span {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.mainbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 22px;
+  color: #344554;
+  font-weight: 600;
+}
+
+.mainbar li {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.mainbar li:hover {
+  color: var(--primary);
+}
+
+.book-btn {
+  background: #fff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 9px 18px;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.book-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: var(--card-shadow);
+}
+
+main section {
+  padding: 0;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slide {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(45, 37, 68, 0.45), rgba(134, 59, 255, 0.2));
+}
+
+.slide-card {
+  margin-left: 10vw;
+  max-width: 470px;
+  background: rgba(255, 255, 255, 0.28);
+  padding: 34px;
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 14px 34px rgba(15, 18, 40, 0.2);
+  backdrop-filter: blur(3px);
+}
+
+.slide-top {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.slide-card h1 {
+  font-size: 2.2rem;
+  margin: 0 0 12px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+}
+
+.slide-card p {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.75);
+}
+
+.btn-primary {
+  margin-top: 14px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 17px;
+  border-radius: 2px;
+  display: inline-block;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #3aa8e6;
+  box-shadow: 0 12px 25px rgba(71, 191, 255, 0.45);
+}
+
+.highlights {
+  max-width: 1200px;
+  margin: -38px auto 24px;
+  padding: 0 5vw;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  position: relative;
+  z-index: 2;
+}
+
+.highlight-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 14px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #efe8ff;
+}
+
+.highlight-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.highlight-card p {
+  margin: 6px 0 0;
+  font-weight: 600;
+  color: #5d5872;
+}
+
+.services {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.service-card {
+  text-align: center;
+  padding: 28px 18px;
+  color: #fff;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  filter: saturate(1.08);
+}
+
+.service-card.skin {
+  background: #b597ff;
+}
+
+.service-card.secondary {
+  background: var(--accent);
+}
+
+.service-card.dark {
+  background: var(--primary);
+}
+
+.service-card.black {
+  background: #31234f;
+}
+
+.service-icon {
+  font-size: 2rem;
+}
+
+.service-card h3 {
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.more-btn {
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 16px;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: 700;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.more-btn:hover {
+  transform: translateY(-1px);
+}
+
+.more-btn.secondary {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.more-btn.primary {
+  background: rgba(52, 55, 64, 0.35);
+}
+
+.about,
+.schedule {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 5vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-sub {
+  margin-top: -6px;
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+.doctor-card {
+  background: var(--soft-bg);
+  border: 1px solid #e7ddff;
+  padding: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.doctor-photo {
+  height: 240px;
+  background: url('/logo.jpeg') center/cover no-repeat;
+}
+
+.doctor-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.doctor-body a {
+  color: #4d535e;
+  text-decoration: none;
+  border: 1px solid #c9d4de;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 3px;
+  transition: all 0.25s ease;
+}
+
+.doctor-body a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.text-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.schedule {
+  background: linear-gradient(180deg, #f8fbff 0%, var(--soft-bg) 100%);
+  grid-template-columns: 2fr 1fr;
+}
+
+.mosaic {
+  margin-top: 20px;
+  min-height: 320px;
+  border-radius: 5px;
+  background: url('https://healthflex.plethorathemes.com/pediatrician/wp-content/uploads/sites/5/2016/06/AdobeStock_79720920-Copy.jpeg')
+    center/cover no-repeat;
+}
+
+.schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(34, 20, 73, 0.09);
+}
+
+.schedule td {
+  border-bottom: 1px solid #dce9f0;
+  padding: 10px 0;
+  font-size: 0.95rem;
+}
+
+.schedule td:last-child {
+  text-align: right;
+  font-weight: 700;
+}
+
+.cta {
+  background:
+    linear-gradient(rgba(134, 59, 255, 0.82), rgba(71, 191, 255, 0.8)),
+    url('https://healthflex.plethorathemes.com/pediatrician/wp-content/uploads/sites/5/2016/06/AdobeStock_79719884.jpeg')
+      center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.cta h2,
+.cta p {
+  color: #fff;
+}
+
+.btn-success {
+  margin-top: 14px;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background: #6f48d7;
+  padding: 10px 16px;
+  border-radius: 3px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(50, 22, 114, 0.35);
+}
+
+@media (max-width: 1000px) {
+  .mainbar ul,
+  .top-links {
+    display: none;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: -25px;
+  }
+
+  .about,
+  .schedule {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainbar {
+    gap: 10px;
+  }
+
+  .brand span {
+    font-size: 1.05rem;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .slide-card {
+    margin: 30px 16px;
+    padding: 24px;
+  }
+}
