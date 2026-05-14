@@ -105,16 +105,16 @@ function App() {
 
       <div className="sticky top-0 z-40 border-b border-astha-200 bg-white shadow-sm">
         <nav
-          className="mx-auto flex min-h-[3.75rem] max-w-6xl items-center justify-between gap-3 px-4 sm:min-h-[4.25rem] sm:px-6 lg:px-8"
+          className="mx-auto flex min-h-[4rem] max-w-6xl items-center justify-between gap-3 px-4 sm:min-h-[4.5rem] sm:px-6 lg:px-8"
           aria-label="Primary"
         >
           <a href="#top" className="inline-flex shrink-0 items-center leading-none" aria-label={`${clinic.name} home`}>
             <img
               src={asthaLogo}
               alt=""
-              className="h-[calc(2.25rem*1.2)] w-auto max-w-[min(300px,52vw)] object-contain object-left sm:h-[calc(2.5rem*1.2)]"
+              className="h-[calc(2.25rem*1.44)] w-auto max-w-[min(360px,60vw)] object-contain object-left sm:h-[calc(2.5rem*1.44)]"
               width={216}
-              height={58}
+              height={80}
               decoding="async"
             />
             <span className="sr-only">{clinic.name}</span>
@@ -197,7 +197,7 @@ function App() {
               muted
               loop
               playsInline
-              poster="/image1.jpeg"
+            
             >
               <source src="/banner.mp4" type="video/mp4" />
             </video>
@@ -233,12 +233,8 @@ function App() {
           </article>
         </section>
 
-        <div className="mx-auto flex max-w-6xl justify-center px-4 py-3 sm:px-6" aria-hidden>
-          <img src={icons.ekg} className="h-auto w-[min(280px,78%)] opacity-90" alt="" width={200} height={16} />
-        </div>
-
         {/* Stats */}
-        <section className="relative z-10 -mt-6 px-4 pb-8 sm:-mt-7 sm:px-6 lg:px-8">
+        <section className="relative z-10 px-4 pb-8 pt-4 sm:px-6 sm:pt-6 lg:px-8">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map(([value, label]) => (
               <article
@@ -412,12 +408,17 @@ function App() {
         </section>
       </main>
 
-      <footer className="bg-astha-900 px-4 py-8 text-slate-300 sm:px-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
-          <div className="rounded-xl bg-white px-3 py-2 shadow-md">
-            <img src={asthaLogo} alt="Astha Health Care" className="h-11 w-auto object-contain" width={150} height={52} decoding="async" />
-          </div>
-          <p className="m-0 text-center text-sm sm:text-right">
+      <footer className="border-t border-astha-200 bg-white px-4 py-8 sm:px-6">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 sm:flex-row sm:gap-6">
+          <img
+            src={asthaLogo}
+            alt="Astha Health Care"
+            className="h-12 w-auto max-w-[min(280px,85vw)] object-contain sm:h-14"
+            width={180}
+            height={62}
+            decoding="async"
+          />
+          <p className="m-0 text-center text-sm font-semibold leading-relaxed text-red-600 sm:text-right sm:text-base">
             © {new Date().getFullYear()} {clinic.name}. All rights reserved.
           </p>
         </div>
