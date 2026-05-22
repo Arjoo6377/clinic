@@ -2,6 +2,7 @@ export const ROUTES = {
   home: '/',
   about: '/about',
   services: '/services',
+  serviceDetail: (slug) => `/services/${slug}`,
   insurance: '/insurance',
   hours: '/hours',
   contact: '/contact',

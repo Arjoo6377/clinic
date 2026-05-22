@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { SERVICES } from '../../data/services'
+import { TREATMENT_SERVICES } from '../../data/serviceDetails'
 import { ROUTES } from '../../constants/routes'
 import { staggerContainer, viewportOnce } from '../../animations/presets'
 import ServiceCard from './ServiceCard'
@@ -21,9 +21,18 @@ export default function ServicesPreview() {
           viewport={viewportOnce}
           variants={staggerContainer}
         >
-          {SERVICES.map((service, index) => (
-            <ServiceCard key={service.id} service={service} index={index} />
-          ))}
+            {TREATMENT_SERVICES.slice(0, 4).map((service, index) => (
+              <ServiceCard
+                key={service.slug}
+                service={{
+                  id: service.slug,
+                  title: service.title,
+                  subtitle: service.subtitle,
+                  icon: service.icon,
+                }}
+                index={index}
+              />
+            ))}
         </motion.div>
         <p className="mt-6 text-center">
           <Link to={ROUTES.services} className="font-bold text-astha-800 hover:underline">

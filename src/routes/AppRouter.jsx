@@ -7,6 +7,7 @@ import { ROUTES } from '../constants/routes'
 const HomePage = lazy(() => import('../pages/HomePage'))
 const AboutPage = lazy(() => import('../pages/AboutPage'))
 const ServicesPage = lazy(() => import('../pages/ServicesPage'))
+const ServiceDetailPage = lazy(() => import('../pages/ServiceDetailPage'))
 const InsurancePage = lazy(() => import('../pages/InsurancePage'))
 const HoursPage = lazy(() => import('../pages/HoursPage'))
 const ContactPage = lazy(() => import('../pages/ContactPage'))
@@ -31,6 +32,7 @@ const routes = [
       { path: ROUTES.home, element: <HomePage /> },
       { path: ROUTES.about, element: <AboutPage /> },
       { path: ROUTES.services, element: <ServicesPage /> },
+      { path: `${ROUTES.services}/:slug`, element: <ServiceDetailPage /> },
       { path: ROUTES.insurance, element: <InsurancePage /> },
       { path: ROUTES.hours, element: <HoursPage /> },
       { path: ROUTES.contact, element: <ContactPage /> },

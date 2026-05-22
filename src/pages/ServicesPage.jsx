@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import PageBanner from '../components/ui/PageBanner'
 import PageMeta from '../components/ui/PageMeta'
@@ -7,8 +8,9 @@ import ServiceCard from '../components/sections/ServiceCard'
 import ProcessSteps from '../components/sections/ProcessSteps'
 import CtaSection from '../components/sections/CtaSection'
 import Icon from '../components/ui/Icon'
-import { SERVICES, CARE_JOURNEY, WHO_WE_SERVE } from '../data/services'
+import { TREATMENT_SERVICES, CARE_JOURNEY, WHO_WE_SERVE } from '../data/serviceDetails'
 import { CLINIC } from '../constants/clinic'
+import { ROUTES } from '../constants/routes'
 import { staggerContainer, scaleIn, viewportOnce } from '../animations/presets'
 
 export default function ServicesPage() {
@@ -16,62 +18,69 @@ export default function ServicesPage() {
     <>
       <PageMeta
         title={`Services | ${CLINIC.name}`}
-        description="General consultation, preventive checkups, chronic disease care, and appointments at Astha Health Care, Badarpur."
+        description="Fever, diabetes, hypertension, thyroid, cough, stomach, checkups, asthma, dengue, and fatigue treatment in Badarpur."
       />
       <PageBanner
         title="Our services"
-        subtitle="Focused primary care to keep you and your family well—with clear explanations at every step."
+        subtitle="Specialised treatment pages for common conditions—with symptoms, diagnosis, and care guidance."
       />
 
       <section className="section-padding bg-gradient-to-b from-astha-100 to-white">
         <Container>
+          <SectionHeader
+            eyebrow="Treatments"
+            title="Select a condition to learn more"
+            subtitle="Each service has a dedicated page with causes, types, treatment, and FAQs."
+            className="mb-10"
+          />
           <motion.div
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
             variants={staggerContainer}
           >
-            {SERVICES.map((service, index) => (
-              <ServiceCard key={service.id} service={service} index={index} />
+            {TREATMENT_SERVICES.map((service, index) => (
+              <ServiceCard
+                key={service.slug}
+                service={{
+                  id: service.slug,
+                  title: service.title,
+                  subtitle: service.subtitle,
+                  icon: service.icon,
+                }}
+                index={index}
+              />
             ))}
           </motion.div>
         </Container>
       </section>
 
       <section className="section-padding">
-        <Container>
+        <Container narrow>
           <SectionHeader
-            eyebrow="In detail"
-            title="What each service includes"
-            subtitle="Expand your understanding before you book—every consultation is tailored to your symptoms and history."
-            className="mb-10"
+            title="Quick reference"
+            subtitle="Jump directly to any treatment guide."
+            className="mb-6"
           />
-          <div className="grid gap-6 lg:grid-cols-2">
-            {SERVICES.map((service) => (
-              <article key={service.id} className="card p-6 sm:p-8">
-                <div className="flex items-start gap-4">
-                  <div className="icon-box m-0 h-12 w-12 shrink-0">
-                    <Icon name={service.icon} size={24} />
+          <ul className="divide-y divide-astha-200 rounded-2xl border border-astha-200 bg-white">
+            {TREATMENT_SERVICES.map((service) => (
+              <li key={service.slug}>
+                <Link
+                  to={ROUTES.serviceDetail(service.slug)}
+                  className="flex items-center gap-4 px-4 py-4 transition hover:bg-astha-100 sm:px-6"
+                >
+                  <div className="icon-box m-0 h-10 w-10 shrink-0">
+                    <Icon name={service.icon} size={22} />
                   </div>
-                  <div>
-                    <h3 className="font-display text-lg font-semibold text-astha-900">{service.title}</h3>
-                    <p className="mt-1 text-sm text-slate-600">{service.subtitle}</p>
-                  </div>
-                </div>
-                <ul className="mt-5 space-y-2 border-t border-astha-200 pt-5">
-                  {service.details.map((line) => (
-                    <li key={line} className="flex gap-2 text-sm text-slate-700">
-                      <span className="font-bold text-astha-800" aria-hidden>
-                        ·
-                      </span>
-                      {line}
-                    </li>
-                  ))}
-                </ul>
-              </article>
+                  <span className="flex-1 font-display text-sm font-semibold text-astha-900 sm:text-base">
+                    {service.title}
+                  </span>
+                  <span className="text-sm font-bold text-astha-800">Read →</span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </Container>
       </section>
 
@@ -117,7 +126,7 @@ export default function ServicesPage() {
 
       <CtaSection
         title="Not sure which service fits?"
-        description="Describe your symptoms when you call—we will recommend the right type of visit and duration."
+        description="Describe your symptoms when you call—we will recommend the right treatment page and visit type."
       />
     </>
   )
