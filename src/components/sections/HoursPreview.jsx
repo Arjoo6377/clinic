@@ -33,12 +33,12 @@ export default function HoursPreview() {
             </div>
           </div>
           <div className="card p-5 sm:p-6">
-            <h3 className="font-display text-base font-semibold text-astha-900">Working hours snapshot</h3>
+            <h3 className="font-display text-base font-semibold text-astha-900">OPD timing</h3>
             <div className="mt-4">
               <HoursTable compact />
             </div>
             <p className="mt-4 text-xs leading-snug text-slate-600">
-              Thursday: 24-hour shift. Call ahead for evening slots.
+              Morning 9:00–10:30 AM · Evening 5:00–9:00 PM (Mon–Sat). Sunday 5:00–7:00 PM.
             </p>
           </div>
         </div>

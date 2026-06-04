@@ -1,15 +1,11 @@
 import asthaLogo from '../assets/images/astha-logo.png'
-import doctorPhoto from '../assets/images/doctor.jpeg'
+import doctorPhoto from '../assets/doctorphoto.jpeg'
 import clinicInterior from '../assets/images/clinic-interior.jpg'
 import clinicExterior from '../assets/images/clinic-exterior.jpeg'
 import heroBrand from '../assets/images/hero.png'
 
-/**
- * Each photo appears on exactly one page:
- * About → doctor | Gallery → interior, exterior, hero | Home → video only
- */
+/** Clinic photos — doctor portrait: assets/doctorphoto.jpeg */
 export const PAGE_IMAGES = {
-  about: doctorPhoto,
   gallery: [clinicInterior, clinicExterior, heroBrand],
 }
 
@@ -28,9 +24,11 @@ export const CLINIC = {
     ),
   doctor: {
     name: 'Dr. Praveer Kumar',
-    role: 'General physician',
-    experience: '12+ years in primary care',
+    degrees: 'MBBS, AFIH, PGDIS',
+    role: 'Family Physician',
+    experience: '25+ years of clinical expertise',
     image: doctorPhoto,
+    specialFocus: 'General healthcare, preventive medicine, occupational health & patient wellness',
   },
   assets: {
     logo: asthaLogo,

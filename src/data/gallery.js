@@ -1,9 +1,16 @@
+import doctorPhoto from '../assets/doctorphoto.jpeg'
 import clinicInterior from '../assets/images/clinic-interior.jpg'
 import clinicExterior from '../assets/images/clinic-exterior.jpeg'
 import heroBrand from '../assets/images/hero.png'
 
-/** Gallery-only assets — not used on other pages */
 export const GALLERY_ITEMS = [
+  {
+    src: doctorPhoto,
+    alt: 'Dr. Praveer Kumar — Family Physician',
+    caption: 'Dr. Praveer Kumar',
+    description: 'MBBS, AFIH, PGDIS — 25+ years serving families in Badarpur.',
+    portrait: true,
+  },
   {
     src: clinicInterior,
     alt: 'Bright reception and waiting area',

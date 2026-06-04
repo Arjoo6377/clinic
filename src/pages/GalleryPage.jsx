@@ -36,15 +36,27 @@ export default function GalleryPage() {
                 variants={scaleIn}
                 className={i === 0 ? 'card overflow-hidden md:col-span-2 md:row-span-2' : 'card overflow-hidden'}
               >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className={i === 0 ? 'aspect-[16/10] w-full object-cover' : 'aspect-[4/3] w-full object-cover'}
-                  loading="lazy"
-                  decoding="async"
-                  width={800}
-                  height={600}
-                />
+                <div
+                  className={
+                    item.portrait
+                      ? 'flex min-h-[280px] items-center justify-center bg-astha-100 p-4 md:min-h-[360px]'
+                      : 'aspect-[4/3] w-full overflow-hidden'
+                  }
+                >
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className={
+                      item.portrait
+                        ? 'max-h-[min(340px,50vh)] w-full object-contain object-center'
+                        : 'h-full w-full object-cover'
+                    }
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
+                  />
+                </div>
                 <figcaption className="p-5">
                   <p className="font-display font-semibold text-astha-900">{item.caption}</p>
                   <p className="mt-1 text-sm text-slate-700">{item.description}</p>

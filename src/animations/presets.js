@@ -15,7 +15,7 @@ export const fadeIn = {
   },
 }
 
-export const staggerContainer = {
+export const staggerContainer =  {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,

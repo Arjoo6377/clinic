@@ -3,45 +3,42 @@ import PageBanner from '../components/ui/PageBanner'
 import PageMeta from '../components/ui/PageMeta'
 import Container from '../components/ui/Container'
 import SectionHeader from '../components/ui/SectionHeader'
-import SplitSection from '../components/ui/SplitSection'
-import DoctorCard from '../components/sections/DoctorCard'
+import DoctorProfileSection from '../components/sections/DoctorProfileSection'
 import FeatureCard from '../components/sections/FeatureCard'
 import CtaSection from '../components/sections/CtaSection'
 import Button from '../components/ui/Button'
-import { ABOUT_VALUES, ABOUT_INTRO, CLINIC_STANDARDS, DOCTOR_BIO } from '../data/about'
+import { ABOUT_VALUES, ABOUT_INTRO, CLINIC_STANDARDS, DOCTOR_PROFILE } from '../data/about'
 import { CLINIC } from '../constants/clinic'
 import { ROUTES } from '../constants/routes'
 import { staggerContainer, viewportOnce } from '../animations/presets'
 
 export default function AboutPage() {
+  const { doctor } = CLINIC
+
   return (
     <>
       <PageMeta
         title={`About | ${CLINIC.name}`}
-        description={`Learn about ${CLINIC.name}, ${CLINIC.doctor.name}, and our patient-first general physician practice in Badarpur.`}
+        description={`${doctor.name} (${doctor.degrees}) — ${doctor.experience}. General healthcare, preventive medicine, and occupational health in Badarpur.`}
       />
       <PageBanner
         title="About Astha Health Care"
-        subtitle="A trusted general physician practice in Badarpur, focused on everyday health for families and individuals."
+        subtitle={`Led by ${doctor.name} — patient-centered care with over ${DOCTOR_PROFILE.experienceYears} years of clinical experience.`}
       />
 
-      <SplitSection
-        eyebrow="Our story"
-        title="Care rooted in the community"
-        subtitle={ABOUT_INTRO.mission}
-        mediaPosition="right"
-        media={<DoctorCard />}
-      >
-        <p className="text-body">{ABOUT_INTRO.vision}</p>
-        <ul className="mt-6 space-y-3">
-          {DOCTOR_BIO.map((line) => (
-            <li key={line.slice(0, 24)} className="flex gap-3 text-sm leading-relaxed text-slate-700">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-astha-800" aria-hidden />
-              {line}
-            </li>
-          ))}
-        </ul>
-      </SplitSection>
+      <section className="section-padding">
+        <Container narrow>
+          <SectionHeader
+            eyebrow="Our story"
+            title="Care rooted in the community"
+            subtitle={ABOUT_INTRO.mission}
+            align="left"
+          />
+          <p className="mt-6 text-body">{ABOUT_INTRO.vision}</p>
+        </Container>
+      </section>
+
+      <DoctorProfileSection />
 
       <section className="section-padding bg-astha-100">
         <Container>
@@ -92,7 +89,7 @@ export default function AboutPage() {
 
       <CtaSection
         title="Ready to register as a new patient?"
-        description="Call our desk to book your first visit—we will tell you what to bring and when we have availability."
+        description={`Book a consultation with ${doctor.name} — call our desk for availability and what to bring on your first visit.`}
       />
     </>
   )

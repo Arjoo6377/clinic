@@ -49,6 +49,15 @@ export const TREATMENT_SERVICES = [
       'Differentiation between viral colds and bacterial infections—so you receive the right treatment without unnecessary antibiotics.',
   },
   {
+    slug: 'pediatric-treatment',
+    title: 'Pediatric Treatment',
+    shortTitle: 'Pediatric Care',
+    subtitle: 'Compassionate medical care for infants, children, and adolescents.',
+    icon: 'shieldCheck',
+    intro:
+      'Child-friendly consultations for fever, cough, growth checks, vaccinations, and everyday illnesses—with weight-based dosing and clear guidance for parents.',
+  },
+  {
     slug: 'stomach-infection-acidity',
     title: 'Stomach Infection & Acidity Treatment',
     shortTitle: 'Stomach Infection & Acidity',
@@ -1158,6 +1167,120 @@ const DETAIL_CONTENT = {
       description: 'Book a fatigue evaluation—we will plan focused tests and treatment.',
     },
   },
+
+  'pediatric-treatment': {
+    whatIs: {
+      content:
+        'Pediatric care focuses on the health of babies, children, and teenagers—from newborn checkups to school-age illnesses. Children are not small adults; they need age-appropriate examination, dosing, and explanations that parents can follow confidently at home.',
+      note: 'We treat common childhood conditions and coordinate vaccination and growth monitoring as part of family care at Astha Health Care.',
+    },
+    symptoms: {
+      intro: 'Bring your child for assessment when symptoms worry you or affect feeding, sleep, or activity.',
+      items: [
+        'Fever, irritability, or excessive crying in infants and toddlers',
+        'Cough, cold, sore throat, or ear pain',
+        'Vomiting, diarrhoea, poor appetite, or abdominal pain',
+        'Rash, skin infection, or allergic reactions',
+        'Breathing difficulty, wheezing, or fast breathing',
+        'Poor weight gain, delayed milestones, or frequent infections',
+        'School absence due to repeated illness',
+      ],
+    },
+    causes: {
+      intro: 'Most childhood visits are viral; we identify when bacterial treatment or urgent care is needed.',
+      items: [
+        'Viral respiratory and stomach infections (very common)',
+        'Ear infections and throat infections in school-age children',
+        'Dehydration from gastroenteritis in hot weather',
+        'Seasonal dengue, malaria, and typhoid exposure in endemic periods',
+        'Asthma or allergy flares triggered by dust, pollution, or infection',
+        'Nutritional deficiencies affecting growth and energy',
+        'Incomplete vaccination or missed booster doses',
+      ],
+    },
+    types: {
+      items: [
+        { name: 'Newborn & infant care', text: 'Feeding issues, colic, fever in young babies—careful assessment and parent counselling.' },
+        { name: 'Toddler & preschool', text: 'Frequent cough-cold cycles, wheeze, skin problems, and vaccination schedules.' },
+        { name: 'School-age children', text: 'Illness during school terms, abdominal pain, headaches, and injury care.' },
+        { name: 'Adolescent health', text: 'Growth review, anaemia screening, lifestyle advice, and confidential health concerns.' },
+      ],
+    },
+    diagnosis: {
+      intro: 'Gentle examination with tests only when they change treatment.',
+      items: [
+        'Weight, height, temperature, and oxygen saturation',
+        'Ear, throat, lung, and abdominal examination',
+        'Growth chart review and vaccination record check',
+        'Blood tests when fever is prolonged or child looks unwell',
+        'Urine test if urinary symptoms or unexplained fever',
+        'Referral for X-ray or specialist paediatric opinion when indicated',
+      ],
+    },
+    treatment: {
+      intro: 'Safe, weight-based treatment with clear home-care instructions for parents.',
+      items: [
+        'Paracetamol and fluids for fever—correct dose by weight, not age guesswork',
+        'Antibiotics only when bacterial infection is likely or confirmed',
+        'ORS and diet advice for diarrhoea and vomiting',
+        'Nebulisation or inhaler guidance for wheeze when appropriate',
+        'Skin creams and antihistamines for rashes and allergies as needed',
+        'Follow-up within 24–72 hours for fever or if symptoms worsen',
+        'Vaccination catch-up and preventive counselling',
+      ],
+    },
+    weProvide: {
+      intro: 'Family-friendly pediatric support at our Badarpur clinic.',
+      items: [
+        { title: 'Weight-based prescribing', text: 'Medicine doses calculated for your child’s current weight.', icon: 'stethoscope' },
+        { title: 'Parent-friendly explanations', text: 'Written home-care steps in simple language.', icon: 'shieldCheck' },
+        { title: 'Vaccination guidance', text: 'Schedule review and catch-up planning per national guidelines.', icon: 'calendar' },
+        { title: 'Evening & weekend slots', text: 'Convenient for school-going children and working parents.', icon: 'heartPulse' },
+      ],
+    },
+    whenToVisit: {
+      items: [
+        'Fever in a baby under 3 months—urgent assessment',
+        'Fever above 39°C, repeated vomiting, or refusal to drink',
+        'Fast breathing, chest pulling in, or bluish lips',
+        'Lethargy, difficult to wake, or unusual drowsiness',
+        'Seizure with fever—seek immediate care',
+        'Rash that does not fade on pressure, or with fever',
+        'Dehydration signs: dry mouth, no tears, no urine for 8+ hours',
+        'Routine growth, vaccination, or school health form visits',
+      ],
+    },
+    prevention: {
+      items: [
+        'Complete immunisation as per age—including flu vaccine when advised',
+        'Hand hygiene before meals and after toilet',
+        'Safe drinking water and freshly cooked food for toddlers',
+        'Mosquito protection during dengue season',
+        'Balanced diet with adequate protein, iron, and vegetables',
+        'Limit screen time; encourage outdoor play for fitness and vitamin D',
+        'Keep unwell children home from school to reduce spread',
+      ],
+    },
+    whyChooseUs: {
+      items: [
+        'Calm, patient approach with children and caregivers',
+        '25+ years of clinical experience including family and child visits',
+        'Sensible antibiotic use—viral illnesses explained clearly',
+        'Same clinic for parents and children—continuity for the whole family',
+        'Local Badarpur access without long hospital queues for common illness',
+      ],
+    },
+    faq: [
+      { q: 'What age children do you see?', a: 'We see infants, children, and adolescents for common illnesses and checkups. Very complex neonatal or surgical cases may need specialist referral.' },
+      { q: 'Can I use adult fever medicine for my child?', a: 'No—dose must be by weight. Bring your child for correct paracetamol dosing.' },
+      { q: 'Should every cold get antibiotics?', a: 'Most childhood colds are viral. Antibiotics are prescribed only when clinically appropriate.' },
+      { q: 'Do you provide vaccination at the clinic?', a: 'We guide schedules and documentation; vaccine administration depends on availability—call to confirm.' },
+    ],
+    cta: {
+      title: 'Need a doctor for your child today?',
+      description: 'Call to book a pediatric visit—we will advise urgency and what to bring.',
+    },
+  },
 }
 
 export function getServiceDetail(slug) {
@@ -1222,7 +1345,7 @@ export const CARE_JOURNEY = [
 ]
 
 export const WHO_WE_SERVE = [
-  'Children with fever, cough, or routine illness',
+  'Infants and children—fever, cough, growth & vaccination',
   'Adults needing preventive health checks',
   'Seniors managing blood pressure or diabetes',
   'Families seeking one trusted neighborhood clinic',

@@ -52,5 +52,5 @@ export const TESTIMONIALS = [
 export const TRUST_METRICS = [
   { value: '4.9', label: 'Average patient rating' },
   { value: '10k+', label: 'Consultations served' },
-  { value: '12+', label: 'Years of practice' },
+  { value: '25+', label: 'Years of practice' },
 ]

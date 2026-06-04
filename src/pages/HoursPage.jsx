@@ -15,11 +15,11 @@ export default function HoursPage() {
     <>
       <PageMeta
         title={`Opening Hours | ${CLINIC.name}`}
-        description="Clinic opening hours in Badarpur. Thursday 24-hour shift. Book appointments at Astha Health Care."
+        description="OPD timing at Astha Health Care, Badarpur: morning 9:00–10:30 AM, evening 5:00–9:00 PM. Sunday 5:00–7:00 PM."
       />
       <PageBanner
-        title="Opening hours"
-        subtitle="Convenient weekday and weekend slots for families, seniors, and working patients."
+        title="OPD timing"
+        subtitle="Dr. Praveer Kumar — morning and evening consultations, with Sunday evening hours."
       />
 
       <section className="section-padding">
@@ -28,7 +28,7 @@ export default function HoursPage() {
             <SectionHeader
               eyebrow="Weekly schedule"
               title="When we are open"
-              subtitle="Walk-ins welcome when capacity allows. Call to reserve busy evening slots."
+              subtitle="Walk-ins welcome when capacity allows. Call to book morning or evening OPD slots."
               align="left"
               className="mb-6"
             />
@@ -84,7 +84,7 @@ export default function HoursPage() {
 
       <CtaSection
         title="Need an evening or weekend slot?"
-        description="Mention your preferred day when you call—we track Thursday 24-hour coverage and late weekday hours separately."
+        description="Mention morning or evening OPD when you call—we will confirm availability for your preferred day."
       />
     </>
   )

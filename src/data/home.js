@@ -6,7 +6,7 @@ export const HERO_SLIDE = {
 }
 
 export const STATS = [
-  ['12+', 'Years experience'],
+  ['25+', 'Years experience'],
   ['10k+', 'Patients served'],
   ['24/7', 'Emergency line'],
   ['4.9', 'Average rating'],
@@ -37,6 +37,6 @@ export const HOME_WHY_US = [
 
 export const HOME_QUICK_LINKS = [
   { label: 'View services', path: '/services', desc: 'Consultation, checkups & chronic care' },
-  { label: 'Opening hours', path: '/hours', desc: 'Including Thursday 24-hour shift' },
+  { label: 'Opening hours', path: '/hours', desc: 'Morning & evening OPD—see full schedule' },
   { label: 'Insurance & fees', path: '/insurance', desc: 'Cashless and reimbursement support' },
 ]

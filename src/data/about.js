@@ -5,6 +5,27 @@ export const ABOUT_INTRO = {
     'A community where families choose one physician they trust for years, not a different desk every time they feel unwell.',
 }
 
+export const DOCTOR_PROFILE = {
+  name: 'Dr. Praveer Kumar',
+  degrees: 'MBBS, AFIH, PGDIS',
+  experienceYears: '25+',
+  qualifications: ['MBBS', 'AFIH (Associate Fellow of Industrial Health)', 'PGDIS (Post Graduate Diploma in Industrial Safety)'],
+  specialFocus: [
+    'General healthcare',
+    'Preventive medicine',
+    'Occupational health',
+    'Patient wellness',
+  ],
+  paragraphs: [
+    'Dr. Praveer Kumar (MBBS, AFIH, PGDIS) is a highly experienced and dedicated medical professional with over 25 years of clinical expertise in providing quality healthcare services. Throughout his distinguished career, he has been committed to delivering patient-centered medical care with a focus on accurate diagnosis, effective treatment, and long-term health management.',
+    'With qualifications including MBBS, AFIH (Associate Fellow of Industrial Health), and PGDIS (Post Graduate Diploma in Industrial Safety), Dr. Kumar possesses extensive knowledge in general medicine, occupational health, preventive healthcare, and workplace wellness. His vast experience enables him to address a wide range of health concerns while ensuring personalized treatment plans tailored to each patient\'s unique needs.',
+    'Dr. Kumar believes in combining medical excellence with compassionate care, helping patients make informed decisions about their health and recovery. His approach emphasizes prevention, early intervention, and evidence-based treatment strategies to achieve the best possible outcomes.',
+    'Over the years, he has earned the trust of countless patients through his professionalism, ethical medical practices, and unwavering commitment to improving community health. His mission is to provide accessible, reliable, and comprehensive healthcare services that enhance the quality of life for every patient he serves.',
+  ],
+  closing:
+    'At our clinic, patient health, safety, and satisfaction remain our highest priorities, ensuring every individual receives the care and attention they deserve.',
+}
+
 export const ABOUT_VALUES = [
   {
     title: 'Patient-first care',
@@ -40,10 +61,4 @@ export const CLINIC_STANDARDS = [
     title: 'Referral network',
     text: 'Timely specialist referrals with summary notes when advanced care is required.',
   },
-]
-
-export const DOCTOR_BIO = [
-  'Dr. Praveer Kumar leads general physician care at Astha Health Care with a focus on clear communication and practical treatment plans.',
-  'Patients appreciate thorough examinations, sensible prescribing, and follow-ups that respect their time and budget.',
-  'The practice supports both acute visits and long-term management of common chronic conditions in South Delhi.',
 ]

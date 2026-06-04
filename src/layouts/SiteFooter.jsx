@@ -72,7 +72,7 @@ export default function SiteFooter() {
             <HoursTable compact inverted />
           </div>
           <p className="mt-4 text-xs leading-relaxed text-blue-100/75">
-            Thursday: 24-hour shift. Emergency line available—call for urgent guidance.
+            OPD: Morning 9:00–10:30 AM, Evening 5:00–9:00 PM (Mon–Sat). Sunday 5:00–7:00 PM.
           </p>
           <a
             href={CLINIC.mapsUrl}
